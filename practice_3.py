@@ -20,7 +20,7 @@ def transform(raw):
     print("*INFO: Ejecutando la transformación")
     transformed = raw['title']
     with open('data/transformed.json', 'w', encoding='utf-8') as file:
-        json.dumps(transformed, file, ensure_ascii=False, indent=4)
+        json.dump(transformed, file, ensure_ascii=False, indent=4)
     return transformed
 
 @task(log_stdout=True)
